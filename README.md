@@ -25,27 +25,31 @@ Models.py
 
 from django.db import models
 from django.contrib import admin
-class Employee (models.Model):
-    eid=models.CharField(max_length=20,help_text="Employee ID")
+class Player (models.Model):
+    p_id=models.CharField(max_length=20,help_text="PlayerID")
     name=models.CharField(max_length=100)
     salary=models.IntegerField()
     age=models.IntegerField()
     email=models.EmailField()
 
-class EmployeeAdmin(admin.ModelAdmin):
-    list_display=('eid','name','salary','age','email')
+class PlayerAdmin(admin.ModelAdmin):
+    list_display=('p_id','name','salary','age','email')
+
+
 
 Admin.py
 
 from django.contrib import admin
-from .models import Employee,EmployeeAdmin
-admin.site.register(Employee,EmployeeAdmin)
+from .models import Player,PlayerAdmin
+admin.site.register(Player,PlayerAdmin)
 ```
 
 ## OUTPUT
+![image](https://github.com/Srujana0303/ORM/assets/132996836/a178509b-58de-42dd-9d5a-c7b99a0df193)
 
-![Alt text](image.png)
-![Alt text](image-1.png)
+
+![image-1](https://github.com/Srujana0303/ORM/assets/132996836/36b08a9d-3ec1-4a37-a8d8-be223ad540e3)
+
 
 
 ## RESULT
